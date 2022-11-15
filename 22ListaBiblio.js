@@ -17,3 +17,21 @@ function BuscarAutor() {
         console.log(nomes[x])
     })
 }
+function OrdernarAno() {
+    let anosSup = []
+    let nomesSup = []
+    let indexAnos = anos.slice()
+    indexAnos.sort()
+    for (let index = 0; index < anos.length; index++) {
+        for (let index1 = 0; index1 < array.length; index1++) {
+            if (anos[index1] == indexAnos[index]) {
+                anosSup[index] = anos[index1]
+                nomesSup[index] = nomes[index1]
+                console.log(index1)
+            }
+        }
+    }
+    anos = anosSup
+    nomes = nomesSup
+    console.log(anos, nomes)
+}
